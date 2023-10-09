@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <style>
+        /* styles.css */
+body {
+    font-family: cursive;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #645252;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.cart {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #f4c5c5;
+    background-color: #f4b1b1;
+}
+
+.cart-item {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.cart-item img {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+}
+
+.cart-item-info {
+    background-image: url(shoe01.jpg);
+    position: relative;
+
+}
+
+.cart-item-info1 {
+    background-image: url(shoe02.jppg.jpg);
+    position: absolute;
+}
+
+.description {
+    font-size: 14px;
+    margin-top: 5px;
+    color: #777;
+}
+
+.price {
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.quantity {
+    margin-top: 10px;
+}
+
+.cart-item-remove {
+    cursor: pointer;
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+    display: block;
+}
+
+.total-cost {
+    text-align: right;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.checkout {
+    text-align: center;
+    margin-top: 20px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+    </style>
+</head>
+<body>
+  <header>
+    <h1>Shopping Cart</h1>
+</header>
+
+<section class="cart">
+    <div class="cart-item">
+        <div class="cart-item-info">
+            <h3>Product 1</h3>
+            <p class="description">Lorem ipsum dolor sit amet.</p>
+            <p class="price">$10.00</p>
+            <div class="quantity">
+                <label for="quantity1">Quantity:</label>
+                <input type="number" id="quantity1" value="1">
+            </div>
+            <span class="cart-item-remove" onclick="removeItem(1)">Remove</span>
+        </div>
+    </div>
+
+    <div class="cart-item">
+        <div class="cart-item-info1">
+            <h3>Product 2</h3>
+            <p class="description">Consectetur adipiscing elit.</p>
+            <p class="price">$15.00</p>
+            <div class="quantity">
+                <label for="quantity2">Quantity:</label>
+                <input type="number" id="quantity2" value="1">
+            </div>
+            <span class="cart-item-remove" onclick="removeItem(2)">Remove</span>
+        </div>
+    </div>
+
+    <div class="total-cost">
+        Total: $<span id="total">25.00</span>
+    </div>
+</section>
+
+    <script>
+        // JavaScript functions for cart interactions
+        function removeItem(itemId) {
+            // Remove the item from the cart (not implemented in this example)
+            // You would need a more complex data structure to manage items in a real system
+            alert("Item removed from cart. Refresh the page to update.");
+        }
+
+        function updateTotal() {
+            // Calculate and update the total cost based on item quantities (not implemented in this example)
+            // You would need to access item quantities and prices from your data model
+            alert("Total updated. Refresh the page to see changes.");
+        }
+
+        function checkout() {
+            // Redirect to the checkout page or perform other checkout actions (not implemented in this example)
+            alert("Redirecting to checkout...");
+        }
+    </script>
+</body>
+</html>
